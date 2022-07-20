@@ -1,0 +1,126 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: arial, sans-serif;
+	font-size: 16px;
+	background: #E3B424;
+}
+.contenedor{
+	width: 90%;
+	margin: 20px auto;
+	overflow: hidden;
+}
+header{
+	background: white;
+}
+header nav{
+	width: 90%;
+}
+header nav ul{
+	width: 100%;
+	overflow: hidden;
+	list-style: none;
+}
+header nav ul li{
+	float: left;
+}
+header nav ul li a{
+	text-decoration: none;
+	display: inline-block;
+	padding: 15px 20px;
+	color: #000;
+}
+header nav ul li a:hover{
+	background: #FAD91B;
+	color: white;
+}
+.main{
+	width: 70%;
+	background: #fff;
+	float: left;
+}
+.main .imagen img{
+	width: 100%;
+	vertical-align: top;
+}
+.main .post{
+	width: ;
+	padding: 40px;
+}
+.main .post article h2{
+	margin-bottom: 20px;
+	color: red;
+}
+.main .post article p{
+	margin-bottom: 15px;
+	line-height: 27px;
+	color: lightblue;
+}
+aside{
+	width: 30%;
+	padding: 20px;
+	color: lightgreen;
+	background: #B437F8;
+	float: left;
+}
+aside .lateral{
+	margin-bottom: 20px;
+}
+aside .lateral .titulo{
+	color: lightblue;
+	border-bottom: 1px solid #F84A37;
+	margin-bottom: 10px;
+}
+aside .lateral ul{
+	list-style: none;
+}
+aside .lateral ul li{
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+aside .lateral ul li a{
+	color: black;
+	text-decoration: none;
+}
+aside .lateral ul li a:hover{
+	color: lightgrey;
+}
+aside .lateral p{
+	line-height: 27px;
+}
+footer{
+	width: 70%;
+	background: lightcyan;
+	color: black;
+	padding: 15px 0;
+	text-align: center;
+}
+
+/*Uso de mediaqueries*/
+@media screen and (max-width: 800px){
+	.main{
+	width: 100%;
+	font-size: 12px;
+	background: white;
+	}
+	aside{
+	width: 100%;
+	}
+	footer{
+	width: 100%;
+	}
+}
+
+@media screen and (max-width: 600px){
+	body{
+		background: darkblue;
+	}
+}
+
+@media screen and (min-width:  800px){
+	body{
+		background: darkgrey;
+	}
+}
