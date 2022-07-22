@@ -4,39 +4,55 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no
 	initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>Calculadora</title>
+	<title>Registrarse</title>
+	<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@200&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<style>
-		.main .post{
-			background-image: url("img/Reaper.png");
-			background-position-x: center;
-			background-position-y: center;
-			background-repeat: no-repeat;
-			background-size: 400px;
+		.caja{
+			width: 80%;
+			margin: 40px;
 		}
-		form p{
-			text-align: center;
-			margin-bottom: 20px;
-			font-size: 30px;
+
+		.formulario .caja-inputs{
+			padding: 20px;
+			background: grey;
+			border-radius: 6px 6px 0 0;
 		}
-		input[type="text"]{
+
+		.formulario input[type="text"], .formulario input[type="correo"]{
+			display: block;
 			width: 100%;
 			margin-bottom: 20px;
-			padding: 20px;
-			text-align: center;
-		}
-		form .btn{
-			width: 15%;
-			background: black;
-			color: #fff;
+			padding: 15px 10px;
 			border: none;
-			cursor: pointer;
-			font-size: 16px;
-			text-align: center;
-			padding: 20px;
-			display: inline-block;
-			text-decoration: none;
+			border-bottom: 2px solid lightblue;
+			font-family: 'Slabo 27px', serif;
+			font-size: 18px;
 		}
+
+		.formulario input[type="text"], .formulario input[type="correo"]{
+			border-bottom: 2px solid darkred;
+		}
+
+		.formulario input[type="radio"]{
+			display: none;
+		}
+
+		.formulario .sexo{
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			margin-bottom: 20px;
+		}
+
+		.formulario .sexo .hombre{
+			border-radius: 1px 0 0 1px;
+		}
+
+		.formulario .sexo .mujer{
+			border-radius: 0 3px 3px 0;
+		}
+
 
 	</style>
 </head>
@@ -46,34 +62,40 @@
 			<nav>
 				<ul>
 					<li><a href="index.html">Inicio</a></li>
-					<li><a href="calculadora.html">Calculadora</a></li>
+					<li><a href="calculadora.html">Heroes</a></li>
 					<li><a href="registrarse.html">Registrarse</a></li>
 					<li><a href="#">Tienda</a></li>
 				</ul>
 			</nav>
 		</header>
 		<section class="main">
-			<div class="imagen">
-				<h2>Calculadora</h2>
-				<p>Acciones de calculadora</p>
-			</div>
-			<section class="post">
-				<article>
-					<form action="">
-						<input type="text" id="numero1">
-						<br>
-						<p>+</p>
-						<br>
-						<input type="text" id="numero2">
-						<br>
-						<p>=</p>
-						<br>
-						<input type="text" id="resultado" readonly>
-						<br>
-						<input type="button" onclick="suma()" class="btn" value="Obtener resultado">
-					</form>
+			
+			<div class="caja">
+			<form action="" class="formulario" id="formulario" name="formulario">
+				<div class="caja-inputs">
+					<input type="text" name="nombre" placeholder="Nombre">
+					<input type="text" name="correo" placeholder="Correo">
+					<div class="sexo">
+						<input type="radio" name="sexo" id="hombre" value="Hombre">
+						<label for="hombre">Hombre</label>
+						<input type="radio" name="sexo" id="mujer" value="Mujer">
+						<label for="mujer">Mujer</label>
+						
+					</div>
+					<div class="terminos">
+						<input type="checkbox" name="terminos" id="terminos">
+						<label for="terminos">Acepto los terminos y condiciones</label>
+					</div>
+					<ul class="error">
+						<li>Error1</li>
+						<li>Error2</li>
+					</ul>
+				</div>
+				<input type="submit" name="btn" value="Registrarse">
+			</form>
+			</div>	
 
-				</article>	
+	
 		</section>
 		<aside>
 			<div class="widget">
