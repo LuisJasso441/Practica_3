@@ -9,6 +9,9 @@
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<style>
 		.caja{
+			background: lightblue;
+			font-family: 'Slabo 27px', serif;
+			font-size: 18px;
 			width: 80%;
 			margin: 40px;
 		}
@@ -46,13 +49,61 @@
 		}
 
 		.formulario .sexo .hombre{
-			border-radius: 1px 0 0 1px;
+			border-radius: 5px 0 0 5px;
 		}
 
 		.formulario .sexo .mujer{
-			border-radius: 0 3px 3px 0;
+			border-radius: 0 5px 5px 0;
 		}
 
+		.formulario .label-radio{
+			background: rgb(249, 160, 63, .4);
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+			width: 49%;
+		}
+
+		.formulario input[type="radio"]: checked + .label-radio{
+			background: #fff;
+		}
+
+		.formulario .terminos{
+			text-align: center;
+			color: #424242;
+		}
+
+		.formulario .terminos label{
+			margin-left: 10px;
+		}
+
+		.formulario .error{
+			display: none; /*Se encarga de ocultar la seccion de errores*/
+			margin-top: 20px;
+			border-radius: 3px;
+			background: #ce1818;
+			color: #fff;
+			padding: 15px 10px;
+			padding-left: 40px;
+		}
+
+		.formulario .btn{
+			width: 100%;
+			text-align: center;
+			background: #246eb9;
+			color: lightblue;
+			border: none;
+			display: block;
+			padding: 15px 10px;
+			cursor: pointer;
+			border-radius: 0 0 6px 6px;
+			font-family: 'Slabo 27px', serif;
+			font-size: 18px;
+		}
+
+		.formulario .btn:hover{
+			background: #4357ad;
+		}
 
 	</style>
 </head>
@@ -77,19 +128,15 @@
 					<input type="text" name="correo" placeholder="Correo">
 					<div class="sexo">
 						<input type="radio" name="sexo" id="hombre" value="Hombre">
-						<label for="hombre">Hombre</label>
+						<label class="label-radio hombre" for="hombre">Hombre</label>
 						<input type="radio" name="sexo" id="mujer" value="Mujer">
-						<label for="mujer">Mujer</label>
-						
+						<label class="label-radio mujer" for="mujer">Mujer</label>
 					</div>
 					<div class="terminos">
 						<input type="checkbox" name="terminos" id="terminos">
 						<label for="terminos">Acepto los terminos y condiciones</label>
 					</div>
-					<ul class="error">
-						<li>Error1</li>
-						<li>Error2</li>
-					</ul>
+					<ul class="error" id="error"></ul>
 				</div>
 				<input type="submit" name="btn" value="Registrarse">
 			</form>
